@@ -27,6 +27,7 @@ const StartGameIntentHandler = {
         speakOutput = speakOutput + ". Do you want to guess or get more clues?"
         return handlerInput.responseBuilder
             .speak(speakOutput)
+            .reprompt("sorry")
             .getResponse();
     }
 };
