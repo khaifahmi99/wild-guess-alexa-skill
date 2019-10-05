@@ -35,7 +35,8 @@ const StartGameIntentHandler = {
 const EndGameIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'EndGameIntent';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'EndGameIntent' 
+            && facts.length();
     },
     handle(handlerInput) {
         const speakOutput = "Out of clue. You lost";
