@@ -44,6 +44,7 @@ const NextFactIntentHandler = {
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(repromptOutput)
+            .getResponse();
         } else {
         const speakOutput = facts.pop() + ". What is your guess or next clue?";
         const repromptOutput = "sorry";
