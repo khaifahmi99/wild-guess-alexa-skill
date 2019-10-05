@@ -3,8 +3,6 @@
 // session persistence, api calls, and more.
 const Alexa = require('ask-sdk-core');
 
-// const pickedAnimal = Data[pickedAnimalIndex].name;
-
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
@@ -181,6 +179,7 @@ const Data = [{
 ];
 
 const PickedAnimalIndex = Math.floor(Math.random() * Data.length);
+
 
 // The SkillBuilder acts as the entry point for your skill, routing all request and response
 // payloads to the handlers above. Make sure any new handlers or interceptors you've
