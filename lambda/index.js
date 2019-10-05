@@ -32,6 +32,8 @@ const StartGameIntentHandler = {
     }
 };
 
+
+
 const NextFactIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
