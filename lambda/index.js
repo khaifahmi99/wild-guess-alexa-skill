@@ -49,7 +49,7 @@ const GuessCaptureIntentHandler = {
         
         const guessedAnimal = sessionAttributes.hasOwnProperty('animal') ? sessionAttributes.animal : "dsczc";
         
-        if (guessedAnimal === PickedAnimal) {
+        if (guessedAnimal === PickedAnimal.toLowerCase()) {
             const speakOutput = "Congratulations! You guessed it correctly";
             const repromptOutput = "Do you want next clue?";
             return handlerInput.responseBuilder
