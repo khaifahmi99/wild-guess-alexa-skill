@@ -39,7 +39,7 @@ const GuessCaptureIntentHandler = {
 
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'GuessCaptureIntent'
-            && guessedAnimal;
+            && guessedAnimal !== null;
     },
     handle(handlerInput) {
         const guessedAnimal = handlerInput.requestEnvelope.request.intent.slots.animal.value;
