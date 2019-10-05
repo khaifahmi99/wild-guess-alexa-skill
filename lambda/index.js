@@ -35,16 +35,16 @@ const StartGameIntentHandler = {
 const GuessCaptureIntentHandler = {
     canHandle(handlerInput) {
 
-        // const guessedAnimal = handlerInput.requestEnvelope.request.intent.slots.animal.value;
-        const guessedAnimal = getSlotValue(handlerInput.requestEnvelope, 'animal');
+        const guessedAnimal = handlerInput.requestEnvelope.request.intent.slots.animal.value;
+        // const guessedAnimal = getSlotValue(handlerInput.requestEnvelope, 'animal');
 
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'GuessCaptureIntent'
             && guessedAnimal !== null;
     },
     handle(handlerInput) {
-        // const guessedAnimal = handlerInput.requestEnvelope.request.intent.slots.animal.value;
-        const guessedAnimal = getSlotValue(handlerInput.requestEnvelope, 'animal');
+        const guessedAnimal = handlerInput.requestEnvelope.request.intent.slots.animal.value;
+        // const guessedAnimal = getSlotValue(handlerInput.requestEnvelope, 'animal');
         
         if (guessedAnimal === PickedAnimal.toLowerCase()) {
             const speakOutput = "Congratulations! You guessed it correctly";
