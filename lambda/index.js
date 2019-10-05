@@ -49,7 +49,7 @@ const NextFactIntentHandler = {
     }
 };
 
-const NextFactIntentHandler = {
+const CrapCaptureIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'CrapCaptureIntent';
