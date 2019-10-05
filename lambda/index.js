@@ -45,6 +45,7 @@ const EndGameIntentHandler = {
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(repromptOutput)
+            .getResponse();
     }
 };
 
