@@ -36,10 +36,10 @@ const EndGameIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'EndGameIntent'
-            && facts.length() === 1;
+            && facts.length === 1;
     },
     handle(handlerInput) {
-        const speakOutput = "Out of clue. You lost. The animal is a " + PickedAnimal + ". Did you know that it " + facts.pop();
+        const speakOutput = "Out of clue. You lost. The animal is a " + PickedAnimal + ". Did you know that it " + facts.pop() + facts.length;
         // const speakOutput = "Out of clue. You lost. The animal is a ";
         const repromptOutput = "sorry";
         return handlerInput.responseBuilder
