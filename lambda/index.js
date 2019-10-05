@@ -42,11 +42,7 @@ const GuessCaptureIntentHandler = {
             && guessedAnimal;
     },
     handle(handlerInput) {
-        handlerInput.requestEnvelope.request.intent.slots.year.value
-        const attributesManager = handlerInput.attributesManager;
-        const sessionAttributes = attributesManager.getSessionAttributes() || {};
-        
-        const guessedAnimal = sessionAttributes.hasOwnProperty('animal') ? sessionAttributes.animal : "dsczc";
+        const guessedAnimal = handlerInput.requestEnvelope.request.intent.slots.year.value;
         
         if (guessedAnimal === PickedAnimal.toLowerCase()) {
             const speakOutput = "Congratulations! You guessed it correctly";
