@@ -66,7 +66,7 @@ const GuessCaptureIntentHandler = {
 
 const NextFactIntentHandler = {
     canHandle(handlerInput) {
-        console.log("NextFactIntentHandler");
+        // console.log("NextFactIntentHandler");
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NextFactIntent';
     },
