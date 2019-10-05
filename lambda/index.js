@@ -23,7 +23,7 @@ const StartGameIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
     },
     handle(handlerInput) {
-        const speakOutput = (Data[0]).facts[0];
+        const speakOutput = (Data[PickedAnimalIndex]).facts[0];
         const repromptOutput = "i did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -38,7 +38,7 @@ const NextFactIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NextFactIntent';
     },
     handle(handlerInput) {
-        const speakOutput = (Data[0]).facts[1];
+        const speakOutput = (Data[PickedAnimalIndex]).facts[1];
         const repromptOutput = "I did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
