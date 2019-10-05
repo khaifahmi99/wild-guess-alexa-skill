@@ -102,6 +102,64 @@ const ErrorHandler = {
     }
 };
 
+const Data = [{
+        "name": "rabbit",
+        "facts": [
+            "can be house pet and can be found in the wild",
+            "known for fast breeding",
+            "Eat their own poop",
+            "Known for long ears and jumping",
+            "Easter",
+            "Hard to catch, fast and zig-zag pattern"
+        ]
+    },
+    {
+        "name": "whale",
+        "facts": [
+            "Can sing",
+            "Average weight one hundred and twenty-five  tonnes",
+            "Sleep with half brain wake up",
+            "Larger than a dinosaur",
+            "They give birth to only one baby at a time",
+            "Can accelerate up to twenty meter per hour"
+        ]
+    },
+    {
+        "name": "elephant",
+        "facts": [
+            "My brain weighs five kilos",
+            "I eat fifty tonnes of food a year",
+            "I am a thick-skinned animal, also called pachyderm",
+            "It takes twenty-two months from conception to birth",
+            "I live is Africa and Asia",
+            "I have a long nose"
+        ]
+    },
+    {
+        "name": "Mouse",
+        "facts": [
+            "Scientists use me to save lives",
+            "I love cheese",
+            "My tail can grow as long as my body",
+            "Itchy, Jerry, Micky, Speedy Gonzales, Pinky and the Brain",
+            "I have a lot of predators",
+            "I’m usually nocturnal"
+        ]
+    },
+    {
+        "name": "Hedgehog",
+        "facts": [
+            "I cannot swim",
+            "I have poor eyesight but I have an excellent sense of smell",
+            "I eat caterpillars, beetles, earthworms, and slugs",
+            "I am well-known in blue color",
+            "I gotta go fast ring sound",
+            "A group of me is called an array"
+        ]
+    }
+];
+ 
+
 // The SkillBuilder acts as the entry point for your skill, routing all request and response
 // payloads to the handlers above. Make sure any new handlers or interceptors you've
 // defined are included below. The order matters - they're processed top to bottom.
