@@ -32,6 +32,21 @@ const StartGameIntentHandler = {
     }
 };
 
+const GuessCaptureIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'GuessCaptureIntent';
+    },
+    handle(handlerInput) {
+        const speakOutput = ;
+        const repromptOutput = "Do you want next clue?";
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(repromptOutput)
+            .getResponse();
+    }
+};
+
 const NextFactIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
