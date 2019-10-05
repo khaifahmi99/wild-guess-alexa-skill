@@ -8,8 +8,8 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        // const speakOutput = 'Welcome to Wild Guess, the game where zookeepers need our help. Last night some Rhinos got out of the cage and ran wild. They smashed the office and now all the animal files are all messed up. Your job, match the animals back to their files. Are you up to the task?';
-        const speakOutput = "Are you up to the task?"
+        const speakOutput = 'Welcome to Wild Guess, the game where zookeepers need our help. Last night some Rhinos got out of the cage and ran wild. They smashed the office and now all the animal files are all messed up. Your job, match the animals back to their files. Are you up to the task?';
+        // const speakOutput = "Are you up to the task?"
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
