@@ -39,7 +39,7 @@ const NextFactIntentHandler = {
     },
     handle(handlerInput) {
         const speakOutput = (Data[0]).facts[1];
-        const repromptOutput = "";
+        const repromptOutput = "I did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(repromptOutput)
