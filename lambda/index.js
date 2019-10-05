@@ -39,7 +39,7 @@ const EndGameIntentHandler = {
             && facts.length === 1;
     },
     handle(handlerInput) {
-        const speakOutput = "Out of clue. You lost. The animal is a " + PickedAnimal + ". Did you know that it " + facts.pop();
+        const speakOutput = "Out of clue. You lost. The animal is a " + PickedAnimal + ". Did you know that it " + facts.pop() + "See you next time";
         // const speakOutput = "Out of clue. You lost. The animal is a ";
         const repromptOutput = "sorry";
         return handlerInput.responseBuilder
