@@ -49,6 +49,21 @@ const NextFactIntentHandler = {
     }
 };
 
+const NextFactIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'CrapCaptureIntent';
+    },
+    handle(handlerInput) {
+        const speakOutput = "I do not understand that, can you speak something else?";
+        const repromptOutput = "sorry i cannot seem to understand what you are saying";
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(repromptOutput)
+            .getResponse();
+    }
+};
+
 const HelpIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
