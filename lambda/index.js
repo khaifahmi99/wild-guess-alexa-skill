@@ -38,7 +38,7 @@ const NextFactIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NextFactIntent';
     },
     handle(handlerInput) {
-        const speakOutput = (Data[PickedAnimalIndex]).facts[1];
+        const speakOutput = facts.pop();
         const repromptOutput = "I did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
