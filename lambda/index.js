@@ -12,6 +12,7 @@ const LaunchRequestHandler = {
         const speakOutput = "Are you up to the task?"
         return handlerInput.responseBuilder
             .speak(speakOutput)
+            .reprompt(speakOutput)
             .getResponse();
     }
 };
