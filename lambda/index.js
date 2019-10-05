@@ -3,7 +3,7 @@
 // session persistence, api calls, and more.
 const Alexa = require('ask-sdk-core');
 
-const pickedAnimalIndex = Math.floor(Math.random() * Data.length);
+const PickedAnimalIndex = Math.floor(Math.random() * Data.length);
 // const pickedAnimal = Data[pickedAnimalIndex].name;
 
 const LaunchRequestHandler = {
