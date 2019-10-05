@@ -38,7 +38,7 @@ const NextFactIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NextFactIntent';
     },
     handle(handlerInput) {
-        const speakOutput = facts.pop() + ". What is your guess or next clue?";
+        const speakOutput = ". What is your guess or next clue?";
         const repromptOutput = "sorry";
         return handlerInput.responseBuilder
             .speak(speakOutput)
