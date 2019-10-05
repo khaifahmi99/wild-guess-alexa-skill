@@ -58,7 +58,7 @@ const GuessCaptureIntentHandler = {
                 .withShouldEndSession(true)
                 .getResponse();
         } else {
-            const speakOutput = "Congratulations! You guessed it correctly";
+            const speakOutput = "Sorry, wrong guess. You can ask me the next clue";
             const repromptOutput = "Do you want next clue?";
             return handlerInput.responseBuilder
                 .speak(speakOutput)
