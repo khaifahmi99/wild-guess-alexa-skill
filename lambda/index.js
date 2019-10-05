@@ -39,7 +39,7 @@ const NextFactIntentHandler = {
     },
     handle(handlerInput) {
         const speakOutput = facts.pop();
-        const repromptOutput = "I did not hear you";
+        const speakOutput = facts.pop() + ". What is your guess or next clue?";
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(repromptOutput)
