@@ -35,8 +35,7 @@ const StartGameIntentHandler = {
 const EndGameIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'EndGameIntent' 
-            && facts.length == 1;
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'EndGameIntent';
     },
     handle(handlerInput) {
         const speakOutput = "Out of clue. You lost. The animal is a " + PickedAnimal + ". Did you know that it " + facts.pop();
@@ -55,7 +54,7 @@ const NextFactIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NextFactIntent';
     },
     handle(handlerInput) {
-        const speakOutput = facts.pop() + ". What is your guess or next clue?";
+        const speakOutput = facts.pop() + ". What is your guess or next clue?" + facts.length;
         const repromptOutput = "sorry";
         return handlerInput.responseBuilder
             .speak(speakOutput)
