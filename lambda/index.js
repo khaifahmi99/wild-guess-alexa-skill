@@ -24,6 +24,7 @@ const StartGameIntentHandler = {
     },
     handle(handlerInput) {
         const speakOutput = (Data[0]).facts[0];
+        speakOutput = speakOutput + ". Do you want to guess or get more clues?"
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .getResponse();
