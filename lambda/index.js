@@ -70,6 +70,7 @@ const NextFactIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NextFactIntent';
     },
     handle(handlerInput) {
+        console.log("NextFactIntentHandler");
         if (facts.length === 1) {
         const speakOutput = "Out of clue. You lost. The animal is a " + PickedAnimal + ". Did you know that it " + facts.pop() + ". See you next time";
         const repromptOutput = "sorry";
