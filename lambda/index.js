@@ -3,7 +3,8 @@
 // session persistence, api calls, and more.
 const Alexa = require('ask-sdk-core');
 
-const pickedAnimal = Data[Math.floor(Math.random() * Data.length)].animal;
+const pickedAnimalIndex = Math.floor(Math.random() * Data.length)
+const pickedAnimal = Data[pickedAnimalIndex].animal;
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
@@ -25,7 +26,7 @@ const StartGameIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
     },
     handle(handlerInput) {
-        const speakOutput = (Data[0]).facts[0];
+        const speakOutput = (Data[pickedAnimalIndex]).facts[0];
         const repromptOutput = "i did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -40,7 +41,7 @@ const NextFactIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NextFactIntent';
     },
     handle(handlerInput) {
-        const speakOutput = (Data[0]).facts[1];
+        const speakOutput = (Data[pickedAnimalIndex]).facts[1];
         const repromptOutput = "I did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
