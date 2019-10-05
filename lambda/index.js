@@ -28,7 +28,7 @@ const StartGameIntentHandler = {
     handle(handlerInput) {
         const speakOutput = (Data[0]).facts[0];
         const repromptOutput = "i did not hear you";
-        return handlerInput.responseBuilder
+        return handlerInput.responseBuilders
             .speak(speakOutput)
             .reprompt(repromptOutput)
             .getResponse();
