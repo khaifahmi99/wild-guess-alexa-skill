@@ -3,13 +3,15 @@
 // session persistence, api calls, and more.
 const Alexa = require('ask-sdk-core');
 
+const pickedAnimal = Data[Math.floor(Math.random() * Data.length)].animal;
+
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
         const speakOutput = 'Welcome to Wild Guess, the game where zookeepers need our help. Last night some Rhinos got out of the cage and ran wild. They smashed the office and now all the animal files are all messed up. Your job, match the animals back to their files. Are you up to the task?';
-        const repromptOutput = "Are you up to the task?"
+        const repromptOutput = "Are you up to the task?" + pickedAnimal;
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(repromptOutput)
