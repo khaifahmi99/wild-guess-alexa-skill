@@ -8,10 +8,9 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Welcome, you can say Hello or Help. Which would you like to try?';
+        const speakOutput = 'Welcome to Wild Guess, the game where zookeepers need our help.Last night some Rhinos got out of the cage and ran wild. They smashed the office and now all the animal files are all messed up.Your job, match the animals back to their files.';
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt(speakOutput)
             .getResponse();
     }
 };
