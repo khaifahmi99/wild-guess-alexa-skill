@@ -34,16 +34,15 @@ const StartGameIntentHandler = {
 
 const GuessCaptureIntentHandler = {
     canHandle(handlerInput) {
-        const attributesManager = handlerInput.attributesManager;
-        const sessionAttributes = attributesManager.getSessionAttributes() || {};
-        
-        const guessedAnimal = sessionAttributes.hasOwnProperty('animal') ? sessionAttributes.animal : "dsczc";
+
+        const guessedAnimal = handlerInput.requestEnvelope.request.intent.slots.year.value;
 
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'GuessCaptureIntent'
             && guessedAnimal;
     },
     handle(handlerInput) {
+        handlerInput.requestEnvelope.request.intent.slots.year.value
         const attributesManager = handlerInput.attributesManager;
         const sessionAttributes = attributesManager.getSessionAttributes() || {};
         
