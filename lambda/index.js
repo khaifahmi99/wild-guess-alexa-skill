@@ -32,7 +32,20 @@ const StartGameIntentHandler = {
     }
 };
 
-
+const EndGameIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'EndGameIntent';
+    },
+    handle(handlerInput) {
+        const speakOutput = "Out of clue. You lost";
+        const repromptOutput = "sorry";
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(repromptOutput)
+            .getResponse();
+    }
+};
 
 const NextFactIntentHandler = {
     canHandle(handlerInput) {
