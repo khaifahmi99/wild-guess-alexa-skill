@@ -38,7 +38,7 @@ const GuessCaptureIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'GuessCaptureIntent';
     },
     handle(handlerInput) {
-        const speakOutput = ;
+        const speakOutput = "";
         const repromptOutput = "Do you want next clue?";
         return handlerInput.responseBuilder
             .speak(speakOutput)
