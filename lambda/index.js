@@ -20,7 +20,7 @@ const StartGameIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'I can run fast';
+        const speakOutput = 'I can run fast. Do you wanna guess or get more clue?';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .getResponse();
