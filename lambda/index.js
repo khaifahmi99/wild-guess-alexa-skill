@@ -12,7 +12,7 @@ const LaunchRequestHandler = {
     },
     handle(handlerInput) {
         const speakOutput = 'Welcome to Wild Guess, the game where zookeepers need our help. Last night some Rhinos got out of the cage and ran wild. They smashed the office and now all the animal files are all messed up. Your job, match the animals back to their files. Are you up to the task?';
-        const repromptOutput = "Are you up to the task?" + pickedAnimal;
+        const repromptOutput = "Are you up to the task?";
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(repromptOutput)
@@ -26,7 +26,7 @@ const StartGameIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
     },
     handle(handlerInput) {
-        const speakOutput = (Data[pickedAnimalIndex]).facts[0];
+        const speakOutput = (Data[0]).facts[0];
         const repromptOutput = "i did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -41,7 +41,7 @@ const NextFactIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NextFactIntent';
     },
     handle(handlerInput) {
-        const speakOutput = (Data[pickedAnimalIndex]).facts[1];
+        const speakOutput = (Data[0]).facts[1];
         const repromptOutput = "I did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
