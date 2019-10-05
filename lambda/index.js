@@ -23,7 +23,7 @@ const StartGameIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
     },
     handle(handlerInput) {
-        const speakOutput = facts.pop() + ". What is your guess or next clue? StartGameIntent";
+        const speakOutput = facts.pop() + ". What is your guess or next clue?";
         const repromptOutput = "i did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -38,7 +38,7 @@ const NextFactIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NextFactIntent';
     },
     handle(handlerInput) {
-        const speakOutput = facts.pop() + ". What is your guess or next clue? NextFactIntent";
+        const speakOutput = facts.pop() + ". What is your guess or next clue?";
         const repromptOutput = "sorry";
         return handlerInput.responseBuilder
             .speak(speakOutput)
