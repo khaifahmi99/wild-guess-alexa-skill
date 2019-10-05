@@ -4,7 +4,7 @@
 const Alexa = require('ask-sdk-core');
 
 const pickedAnimalIndex = Math.floor(Math.random() * Data.length);
-const pickedAnimal = Data[pickedAnimalIndex].animal;
+const pickedAnimal = Data[pickedAnimalIndex].name;
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
