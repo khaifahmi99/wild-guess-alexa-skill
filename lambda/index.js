@@ -252,6 +252,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         StartGameIntentHandler,
+        GuessCaptureIntentHandler,
         NextFactIntentHandler,
         CrapCaptureIntentHandler,
         HelpIntentHandler,
