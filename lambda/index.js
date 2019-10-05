@@ -23,7 +23,7 @@ const StartGameIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
     },
     handle(handlerInput) {
-        const speakOutput = (Data[PickedAnimalIndex]).facts[0];
+        const speakOutput = facts.pop() + ". What is your guess or next clue?";
         const repromptOutput = "i did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
