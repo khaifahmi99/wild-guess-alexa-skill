@@ -41,15 +41,27 @@ const GuessCaptureIntentHandler = {
 
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'GuessCaptureIntent'
-            && animal;
+            && guessedAnimal;
     },
     handle(handlerInput) {
-        const speakOutput = "";
-        const repromptOutput = "Do you want next clue?";
-        return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .reprompt(repromptOutput)
-            .getResponse();
+        const attributesManager = handlerInput.attributesManager;
+        const sessionAttributes = attributesManager.getSessionAttributes() || {};
+        
+        const guessedAnimal = sessionAttributes.hasOwnProperty('animal') ? sessionAttributes.animal : "dsczc";
+        
+        if (guessedAnimal === PickedAnimal) {
+            const speakOutput = "Congratulations! You guessed it correctly";
+            const repromptOutput = "Do you want next clue?";
+            return handlerInput.responseBuilder
+                .speak(speakOutput)
+                .reprompt(repromptOutput)
+                .withShouldEndSession(true)
+                .getResponse();
+
+        } else {
+            
+        }
+        
     }
 };
 
