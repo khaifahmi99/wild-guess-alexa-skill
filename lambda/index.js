@@ -16,6 +16,7 @@ const LaunchRequestHandler = {
 
         const speakOutput = "${introsound-proceed}";
         const repromptOutput = "Are you up to the task?";
+        
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(repromptOutput)
