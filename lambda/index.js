@@ -233,7 +233,7 @@ const Data = [{
             "I eat fifty tonnes of food a year",
             "I am a thick-skinned animal, also called pachyderm",
             "It takes twenty-two months from conception to birth",
-            "I live is Africa and Asia",
+            "I live in Africa and Asia",
             "I have a long nose"
         ]
     },
@@ -255,7 +255,7 @@ const Data = [{
             "I have poor eyesight but I have an excellent sense of smell",
             "I eat caterpillars, beetles, earthworms, and slugs",
             "I am well-known in blue color",
-            "I gotta go fast ring sound",
+            "I gotta go fast",
             "A group of me is called an array"
         ]
     }
