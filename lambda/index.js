@@ -14,7 +14,7 @@ const LaunchRequestHandler = {
         facts = Data[PickedAnimalIndex].facts;
         const introToProceed = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/introsound-proceed.mp3"/>';
 
-        const speakOutput = "${introsound-proceed}";
+        const speakOutput = '<audio src="soundbank://soundlibrary/air/fire_extinguisher/fire_extinguisher_01"/>';
         const repromptOutput = "Are you up to the task?";
         
         return handlerInput.responseBuilder
