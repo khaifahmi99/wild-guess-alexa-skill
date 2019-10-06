@@ -96,7 +96,7 @@ const GuessCaptureIntentHandler = {
         // const guessedAnimal = getSlotValue(handlerInput.requestEnvelope, 'animal');
         
         if (guessedAnimal === PickedAnimal.toLowerCase()) {
-            const speakOutput = "Congratulations! You guessed it correctly";
+            const speakOutput = switchVoice("Congratulations! You guessed it correctly");
             const repromptOutput = "Do you want next clue?";
             return handlerInput.responseBuilder
                 .speak(speakOutput)
@@ -104,7 +104,7 @@ const GuessCaptureIntentHandler = {
                 .withShouldEndSession(true)
                 .getResponse();
         } else {
-            const speakOutput = "Sorry, wrong guess. You can ask me the next clue";
+            const speakOutput = switchVoice("Sorry, wrong guess. You can ask me the next clue");
             const repromptOutput = "Do you want next clue?";
             return handlerInput.responseBuilder
                 .speak(speakOutput)
