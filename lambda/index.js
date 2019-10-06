@@ -243,10 +243,10 @@ const Data = [{
     }
 ];
 
-let PickedAnimalIndex = Math.floor(Math.random() * Data.length);
-let PickedAnimal = Data[PickedAnimalIndex].name;
+let PickedAnimalIndex;
+let PickedAnimal;
 
-let facts = Data[PickedAnimalIndex].facts;
+let facts;
 
 // The SkillBuilder acts as the entry point for your skill, routing all request and response
 // payloads to the handlers above. Make sure any new handlers or interceptors you've
