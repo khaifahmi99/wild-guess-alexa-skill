@@ -37,6 +37,21 @@ const StartGameIntentHandler = {
     }
 };
 
+const StartGameIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
+    },
+    handle(handlerInput) {
+        const speakOutput = facts.pop() + ". What is your guess or next clue?";
+        const repromptOutput = "i did not hear you";
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(repromptOutput)
+            .getResponse();
+    }
+};
+
 const NextFactIntentHandler = {
     canHandle(handlerInput) {
         // console.log("NextFactIntentHandler");
