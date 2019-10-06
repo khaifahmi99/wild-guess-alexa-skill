@@ -269,6 +269,7 @@ let facts;
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
+        ChickenIntentHandler,
         StartGameIntentHandler,
         NextFactIntentHandler,
         GuessCaptureIntentHandler,
