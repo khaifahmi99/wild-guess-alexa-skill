@@ -33,6 +33,7 @@ const ChickenIntentHandler = {
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(repromptOutput)
+            .withShouldEndSession(true)
             .getResponse();
     }
 };
