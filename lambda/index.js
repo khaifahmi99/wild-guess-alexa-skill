@@ -266,6 +266,12 @@ let PickedAnimal;
 
 let facts;
 
+function switchVoice(text,voice_name) {
+  if (text){
+    return "<voice name='" + voice_name + "'>" + text + "</voice>"
+  }
+}
+
 // The SkillBuilder acts as the entry point for your skill, routing all request and response
 // payloads to the handlers above. Make sure any new handlers or interceptors you've
 // defined are included below. The order matters - they're processed top to bottom.
