@@ -12,8 +12,9 @@ const LaunchRequestHandler = {
         PickedAnimal = Data[PickedAnimalIndex].name;
 
         facts = Data[PickedAnimalIndex].facts;
+        const introToProceed = "https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/introsound-proceed.mp3";
 
-        const speakOutput = '<amazon:effect name="whispered">Welcome to Wild Guess</amazon:effect>, the game where zookeepers need our help. Last night some Rhinos got out of the cage and ran wild. They smashed the office and now all the animal files are all messed up. Your job, match the animals back to their files. Are you up to the task?';
+        const speakOutput = "${introsound-proceed}";
         const repromptOutput = "Are you up to the task?";
         return handlerInput.responseBuilder
             .speak(speakOutput)
