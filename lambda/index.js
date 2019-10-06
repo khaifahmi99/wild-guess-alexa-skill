@@ -22,10 +22,10 @@ const LaunchRequestHandler = {
     }
 };
 
-const StartGameIntentHandler = {
+const ChickenIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ChickenIntent';
     },
     handle(handlerInput) {
         const speakOutput = facts.pop() + ". What is your guess or next clue?";
@@ -37,10 +37,10 @@ const StartGameIntentHandler = {
     }
 };
 
-const ChickenIntentHandler = {
+const StartGameIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ChickenIntent';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
     },
     handle(handlerInput) {
         const speakOutput = facts.pop() + ". What is your guess or next clue?";
