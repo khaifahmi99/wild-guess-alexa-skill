@@ -96,7 +96,7 @@ const GuessCaptureIntentHandler = {
         // const guessedAnimal = getSlotValue(handlerInput.requestEnvelope, 'animal');
         
         if (guessedAnimal === PickedAnimal.toLowerCase()) {
-            const speakOutput = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/correctguess.mp3"/>' + switchVoice("Congratulations! You guessed it correctly");
+            const speakOutput = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/correctguess.mp3"/>' + switchVoice("Congratulations! You guessed it correctly") + '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/thanks.mp3"/>';
             const repromptOutput = "Do you want next clue?";
             return handlerInput.responseBuilder
                 .speak(speakOutput)
