@@ -266,9 +266,9 @@ let PickedAnimal;
 
 let facts;
 
-function switchVoice(text,voice_name) {
+function switchVoice(text) {
   if (text){
-    return "<voice name='" + voice_name + "'>" + text + "</voice>"
+    return "<voice name='russel'>" + text + "</voice>"
   }
 }
 
