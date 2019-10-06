@@ -63,7 +63,7 @@ const NextFactIntentHandler = {
     },
     handle(handlerInput) {
         if (facts.length === 1) {
-        const speakOutput = switchVoice("Out of clue. You lost. The animal is a ") + switchVoice(PickedAnimal) + switchVoice(". Did you know that it ") + switchVoice(facts.pop()) + switchVoice(". See you next time");
+        const speakOutput = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/nofacts.mp3"/>' + switchVoice("You lost. The animal is a ") + switchVoice(PickedAnimal) + switchVoice(". Did you know that it ") + switchVoice(facts.pop()) + switchVoice(". See you next time");
         const repromptOutput = "sorry";
         return handlerInput.responseBuilder
             .speak(speakOutput)
