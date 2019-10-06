@@ -71,7 +71,7 @@ const NextFactIntentHandler = {
             .withShouldEndSession(true)
             .getResponse();
         } else {
-        const speakOutput = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/readnextfact.mp3"/>' + facts.pop() + ". What is your guess or next clue?";
+        const speakOutput = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/readnextfact.mp3"/>' + switchVoice(facts.pop()) + switchVoice(". What is your guess or next clue?");
         const repromptOutput = "sorry";
         return handlerInput.responseBuilder
             .speak(speakOutput)
