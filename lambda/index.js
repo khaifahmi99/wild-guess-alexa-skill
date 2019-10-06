@@ -46,7 +46,7 @@ const StartGameIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StartGameIntent';
     },
     handle(handlerInput) {
-        const speakOutput = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/gamestart.mp3"/>' + facts.pop() + ". What is your guess or next clue?";
+        const speakOutput = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/gamestart.mp3"/>' + switchVoice(facts.pop()) + switchVoice(". What is your guess or next clue?");
         const repromptOutput = "i did not hear you";
         return handlerInput.responseBuilder
             .speak(speakOutput)
