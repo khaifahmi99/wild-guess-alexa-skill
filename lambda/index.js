@@ -30,7 +30,7 @@ const ChickenIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ChickenIntent';
     },
     handle(handlerInput) {
-        const speakOutput = '<audio src="/>';
+        const speakOutput = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/exit.mp3"/>';
         const repromptOutput = 'Yeah someone is a chicken';
         return handlerInput.responseBuilder
             .speak(speakOutput)
