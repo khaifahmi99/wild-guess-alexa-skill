@@ -268,7 +268,7 @@ let facts;
 
 function switchVoice(text) {
   if (text){
-    return "<voice name='russel'>" + text + "</voice>"
+    return "<voice name='Russell'>" + text + "</voice>"
   }
 }
 
