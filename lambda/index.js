@@ -30,8 +30,8 @@ const ChickenIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ChickenIntent';
     },
     handle(handlerInput) {
-        const speakOutput = "<speak><voice name='russel'>Okay, at least we identified one animal. A chicken</voice></speak>";
-        const repromptOutput = "<voice name='russel'>Yeah someone is a chicken<voice name='russel'>";
+        const speakOutput = '<voice name="russel">Okay, at least we identified one animal. A chicken</voice>';
+        const repromptOutput = '<voice name="russel">Yeah someone is a chicken</voice>';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(repromptOutput)
