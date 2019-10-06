@@ -8,6 +8,11 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
+        PickedAnimalIndex = Math.floor(Math.random() * Data.length);
+        PickedAnimal = Data[PickedAnimalIndex].name;
+
+        facts = Data[PickedAnimalIndex].facts;
+
         const speakOutput = '<amazon:effect name="whispered">Welcome to Wild Guess</amazon:effect>, the game where zookeepers need our help. Last night some Rhinos got out of the cage and ran wild. They smashed the office and now all the animal files are all messed up. Your job, match the animals back to their files. Are you up to the task?';
         const repromptOutput = "Are you up to the task?";
         return handlerInput.responseBuilder
