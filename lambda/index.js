@@ -104,7 +104,7 @@ const GuessCaptureIntentHandler = {
                 .withShouldEndSession(true)
                 .getResponse();
         } else {
-            const speakOutput = switchVoice("Sorry, wrong guess. You can ask me the next clue");
+            const speakOutput = '<audio src="https://alexa-skills-hackathon-wildlife.s3-ap-southeast-2.amazonaws.com/raw/wrongguess.mp3"' + switchVoice("Sorry, wrong guess. You can ask me the next clue");
             const repromptOutput = "Do you want next clue?";
             return handlerInput.responseBuilder
                 .speak(speakOutput)
