@@ -1,0 +1,45 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:946542952723:function:240d2c88-c2ad-482a-8409-83e524c8aae6:Release_1"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": true,
+      "isExportCompliant": true,
+      "containsAds": false
+    },
+    "publishingInformation": {
+      "locales": {
+        "en-AU": {
+          "name": "wild guess",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/ba88/909fb70866f24b3d84409f50f156a138/APP_ICON?versionId=Z9Mr94j97ZxAchaTSrQ.VyqoTgCRF8Jp&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191010T112832Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191010%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=64834a253b1dab71e4505ed12676363a95e688ceea635c727d28a4d8f378bc92",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c887/8b6fbfb55dd4445d9adbb54d57e61a75/APP_ICON_LARGE?versionId=k0ko2nECrhJGFu6fLN.B1xqceHd8yliO&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191010T112832Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191010%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d98a5c64e3ddbf2a002373e166f58259e874d7227243085e1db9624460e8a267",
+          "summary": "Guess the animal as soon as possible given the clues on the characteristics of the animal.",
+          "description": "Alexa will give one clue at a time to let you guess what animal it is. Guess if you can or ask Alexa for more clues. Try to guess the animal as soon as possible because you will lose if you are out of clue.",
+          "examplePhrases": [
+            "Alexa, open wild guess"
+          ],
+          "keywords": [
+            "guessing",
+            "game",
+            "animals",
+            "education",
+            "kids"
+          ]
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Open will guess and keep on following the instruction guided by Alexa. This skill is produced from the Alexa hackathon in Melbourne 2019",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    }
+  }
+}

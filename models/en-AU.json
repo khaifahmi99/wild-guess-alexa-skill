@@ -1,0 +1,89 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "wild guess",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "StartGameIntent",
+          "slots": [],
+          "samples": [
+            "yes",
+            "start game",
+            "start",
+            "begin game"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "NextFactIntent",
+          "slots": [],
+          "samples": [
+            "I need more clue",
+            "another fact please",
+            "another clue",
+            "next clue",
+            "next fact",
+            "give me the next fact",
+            "give me the next clue"
+          ]
+        },
+        {
+          "name": "CrapCaptureIntent",
+          "slots": [],
+          "samples": [
+            "ybjevcqxerfeq ",
+            "nktyvwrecq",
+            "byjuyrhwv",
+            "muknuyub",
+            "rcfgrwvetbyt",
+            "cwecrfrec",
+            "cfwxfwcv",
+            "rfvwec",
+            "cwrwcrwe",
+            "cwfvwew",
+            "greqvcer gqe"
+          ]
+        },
+        {
+          "name": "GuessCaptureIntent",
+          "slots": [
+            {
+              "name": "animal",
+              "type": "AMAZON.Animal"
+            }
+          ],
+          "samples": [
+            "{animal}"
+          ]
+        },
+        {
+          "name": "ChickenIntent",
+          "slots": [],
+          "samples": [
+            "I do not want to play anymore",
+            "i am done",
+            "I give up",
+            "No"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "13"
+}
